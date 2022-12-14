@@ -1,5 +1,5 @@
 public abstract class Voertuig implements Goed {
-    public String type;
+    private String type;
     protected double nieuwPrijs;
     protected int bouwJaar;
 
