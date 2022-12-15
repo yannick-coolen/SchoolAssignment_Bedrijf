@@ -11,20 +11,7 @@ public abstract class Voertuig implements Goed {
 
     @Override
     public boolean equals(Object object) {
-        boolean gelijkeObject = false;
-
-        if (object instanceof Auto auto) {
-            if (this.bouwJaar == auto.bouwJaar) {
-                nieuwPrijs = auto.huidigeWaarde();
-            }
-        }
-
-        if (object instanceof Fiets fiets) {
-            if (this.bouwJaar == fiets.bouwJaar) {
-                nieuwPrijs = fiets.huidigeWaarde();
-            }
-        }
-        return gelijkeObject;
+        return super.equals(object);
     }
 
     public String toString() {
