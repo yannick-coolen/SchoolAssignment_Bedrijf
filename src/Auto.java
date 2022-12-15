@@ -1,5 +1,4 @@
 import java.time.LocalDate;
-import java.util.Objects;
 
 public class Auto extends Voertuig {
     private String kenteken;
@@ -20,12 +19,9 @@ public class Auto extends Voertuig {
 
     @Override
     public boolean equals(Object object) {
-        boolean gelijkeObjecten = false;
-
+        boolean gelijkeObjecten = super.equals(object);
         if (object instanceof Auto andereAuto) {
-            if (Objects.equals(this.kenteken, andereAuto.kenteken)) {
-                gelijkeObjecten = true;
-            }
+            gelijkeObjecten = this.kenteken.equals(andereAuto.kenteken);
         }
         return gelijkeObjecten;
     }
