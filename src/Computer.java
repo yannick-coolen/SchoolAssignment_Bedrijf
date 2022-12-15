@@ -1,7 +1,6 @@
 import java.time.LocalDate;
-import java.util.Objects;
 
-public class Computer implements Goed{
+public class Computer implements Goed {
     private String type, macAdres;
     private double aanschafPrijs;
     private int productieJaar;
@@ -25,11 +24,8 @@ public class Computer implements Goed{
     @Override
     public boolean equals(Object object) {
         boolean gelijkeObjecten = false;
-
         if (object instanceof Computer andereComputer) {
-            if (Objects.equals(this.macAdres, andereComputer.macAdres)) {
-                gelijkeObjecten = true;
-            }
+            gelijkeObjecten = this.macAdres.equals(andereComputer.macAdres);
         }
         return gelijkeObjecten;
     }
