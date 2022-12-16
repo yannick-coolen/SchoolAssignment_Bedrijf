@@ -20,8 +20,10 @@ public class Auto extends Voertuig {
     @Override
     public boolean equals(Object object) {
         boolean gelijkeObjecten = super.equals(object);
-        if (object instanceof Auto andereAuto) {
-            gelijkeObjecten = this.kenteken.equals(andereAuto.kenteken);
+        if (gelijkeObjecten) {
+            if (object instanceof Auto andereAuto) {
+                gelijkeObjecten = this.kenteken.equals(andereAuto.kenteken);
+            }
         }
         return gelijkeObjecten;
     }

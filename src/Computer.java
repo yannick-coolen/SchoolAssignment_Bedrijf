@@ -25,7 +25,12 @@ public class Computer implements Goed {
     public boolean equals(Object object) {
         boolean gelijkeObjecten = false;
         if (object instanceof Computer andereComputer) {
-            gelijkeObjecten = this.macAdres.equals(andereComputer.macAdres);
+            if (this.type.equals(andereComputer.type) &&
+                this.macAdres.equals(andereComputer.macAdres) &&
+                this.aanschafPrijs == andereComputer.aanschafPrijs &&
+                this.productieJaar == andereComputer.productieJaar) {
+                gelijkeObjecten = true;
+            };
         }
         return gelijkeObjecten;
     }

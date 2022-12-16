@@ -21,8 +21,10 @@ public class Fiets extends Voertuig {
     @Override
     public boolean equals(Object object) {
         boolean gelijkeObjecten = super.equals(object);
-        if (object instanceof Fiets andereFiets) {
-            gelijkeObjecten = this.frameNummer.equals(andereFiets.frameNummer);
+        if (gelijkeObjecten) {
+            if (object instanceof Fiets andereFiets) {
+                gelijkeObjecten = this.frameNummer.equals(andereFiets.frameNummer);
+            }
         }
         return gelijkeObjecten;
     }
