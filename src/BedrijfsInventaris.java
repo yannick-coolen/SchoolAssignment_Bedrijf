@@ -15,14 +15,12 @@ public class BedrijfsInventaris {
         if (!alleGoederen.contains(goed)) {
             if (budget < goed.huidigeWaarde()) {
                 System.out.println("Prijs van goed is te duur.");
-            }
-            else {
+            } else {
                 alleGoederen.add(goed);
                 System.out.println(goed);
             }
-        }
-        else {
-            System.out.println("Goed al in bezit");
+        } else {
+            System.out.println("Fout, goed is al in bezit of niet uniek");
         }
     }
 
