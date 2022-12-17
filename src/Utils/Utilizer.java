@@ -7,7 +7,6 @@ public class Utilizer {
     private static Locale locale = new Locale.Builder().setLanguage("nl").setRegion("NL").build();
     private static NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(locale);
 
-
     /**
      * Biedt de mogelijkheid om op basis van invoer van bedrag en
      * (optioneel) precisie een valuta bedrag in euro's terug te
