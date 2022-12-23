@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import Utils.*;
 
 public class BedrijfsInventaris {
     private String bedrijfsNaam;
@@ -19,7 +18,7 @@ public class BedrijfsInventaris {
      */
     public void schafAan(Goed goed) {
         // Als alleGoederen niet de doorgevoerde goed waarde bevat,
-        // dan wordt het budget gechecked of deze lager of gelijk
+        // dan wordt het budget gecheckt of deze lager of gelijk
         // aan huidigeWaarde is.
         if (!alleGoederen.contains(goed)) {
             // Als het budget niet lager of gelijk aan huidigeWaarde is,
@@ -40,9 +39,7 @@ public class BedrijfsInventaris {
         StringBuilder sGoederen = new StringBuilder();
         // Voeg bij elk goed dat in de lijst alleGoederen zit
         // de stringwaarde van goed toe.
-        for (Goed goed : alleGoederen) {
-            sGoederen.append("\n").append(goed);
-        }
+        alleGoederen.forEach(goed -> sGoederen.append("\n").append(goed));
         return sGoederen.toString();
     }
 }
