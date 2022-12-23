@@ -1,4 +1,4 @@
-import Utils.Utilizer;
+import utils.Utilizer;
 
 public abstract class Voertuig implements Goed {
     private String type;
